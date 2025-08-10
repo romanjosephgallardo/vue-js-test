@@ -1,13 +1,9 @@
 <script setup>
-	import { ref } from "vue";
-	let isVisible = ref(true);
+	import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-    <p v-show="isVisible">
-		This is a sentence.
-	</p>
-	<button @click="isVisible != isVisible"> Toggle Visibility </button>
+	<HelloWorld />
 </template>
  
 <style></style>
