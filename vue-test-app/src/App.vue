@@ -1,12 +1,13 @@
 <script setup>
-	import { computed, ref } from "vue";
-	const firstName = ref("Roman");
-	const lastName = ref("Gallardo ");
-	const fullName = computed(() => firstName.value + " " + lastName.value);
+	import { ref } from "vue";
+	let isVisible = ref(true);
 </script>
 
 <template>
-    <h1> Full name: {{  fullName  }}</h1>
+    <p v-show="isVisible">
+		This is a sentence.
+	</p>
+	<button @click="isVisible != isVisible"> Toggle Visibility </button>
 </template>
  
 <style></style>
