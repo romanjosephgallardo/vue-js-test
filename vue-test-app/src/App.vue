@@ -1,11 +1,12 @@
 <script setup>
-	import { ref } from "vue";
-	let userName = ref("");
+	import { computed, ref } from "vue";
+	const firstName = ref("Roman");
+	const lastName = ref("Gallardo ");
+	const fullName = computed(() => firstName.value + " " + lastName.value);
 </script>
 
 <template>
-    <h1> Username: {{  userName  }}</h1>
-	<button @click="userName = 'jordan'"> Add User </button>
+    <h1> Full name: {{  fullName  }}</h1>
 </template>
  
 <style></style>
