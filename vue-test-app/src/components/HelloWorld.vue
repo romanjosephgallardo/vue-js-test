@@ -1,15 +1,15 @@
 <template>
-    <DynamicPropsComponent 
-        :firstName="firstName"
-        :lastName="lastName"
-    />
+    <StudentComponent />
+
 </template>
 
 <script setup>
-    import { ref } from "vue";
-    import DynamicPropsComponent from "./DynamicPropsComponent.vue";
-    const firstName = ref('Alex');
-    const lastName = ref('Gonzales');
+    import { provide } from 'vue'
+    import StudentComponent from './StudentComponent.vue';
+    
+    provide('studentName', 'Alex')
+    provide('studentAge', 20)
+    provide('studentLocation', ['Earth', 'IDK'])
 </script>
 
 <style lang="scss" scoped>
